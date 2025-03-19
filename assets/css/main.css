@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+@layer components{
+    .button {
+        color: var(--color-white);
+        background-color: var(--color-emerald-400);
+        border-radius: var(--radius-sm);
+        --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+        --tw-shadow-color: var(--color-emerald-900);
+        &:hover {
+            background-color: var(--color-emerald-500);
+        }
+        &:where(.dark, .dark *) {
+            background-color: var(--color-emerald-700);
+            &:hover {
+                background-color: var(--color-emerald-800);
+            }
+        }
+    }
+    .listItem {
+        display: block;
+        background-color: var(--color-white);
+        border-radius: var(--radius-sm);
+        --tw-shadow-color: var(--color-emerald-900);
+        --tw-shadow: 0 1px var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+        box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+        &:hover {
+            background-color: var(--color-emerald-100);
+        }
+        &:where(.dark, .dark *) {
+            background-color: var(--color-gray-800);
+            --tw-shadow-color: var(--color-gray-800);
+            &:hover {
+                background-color: var(--color-emerald-900);
+            }
+        }
+    }
+}
