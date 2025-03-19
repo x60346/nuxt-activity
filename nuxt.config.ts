@@ -5,6 +5,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineNuxtConfig({
   app:{
     baseURL:'/nuxt-activity/',
+    buildAssetsDir: '/static/',
     head:{
       title:'藝文活動平台',
       htmlAttrs:{
