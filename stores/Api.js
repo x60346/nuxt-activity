@@ -15,7 +15,7 @@ export const useApiStore = defineStore('Api',()=>{
     }
     async function getApiHotActivity(){
         try {
-            const d = await apiService.get('/opendata/activityOpenDataJsonAction.do?method=doFindActivitiesByCategory&category=all')
+            const d = await apiService.get('/opendata/activityOpenDataJsonAction.do?method=doFindActivitiesByCategory&category=6')
             return d
         } catch (error) {
             console.log(error.message);

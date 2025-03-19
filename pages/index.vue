@@ -44,15 +44,15 @@
     let showHotActivity = ref(false)
     const hotNum = ref(6)  // 顯示活動數量
     async function getHotActivity(n) {
-    const ha = await getApiHotActivity()
-    for(let i=0 ; i<n ; i++){
-        let a = {
-        title:ha.data[i].title,
-        uuid:ha.data[i].UID
+        const ha = await getApiHotActivity()
+        for(let i=0 ; i<n ; i++){
+            let a = {
+            title:ha.data[i].title,
+            uuid:ha.data[i].UID
+            }
+            hotActivity.push(a)
         }
-        hotActivity.push(a)
-    }
-    showHotActivity.value = true
+        showHotActivity.value = true
     }
 
     // 跳轉資訊頁
